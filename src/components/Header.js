@@ -6,12 +6,12 @@ export default function Header(){
             <div 
             style={{width:'100%',background:'silver',display:'flex',flexWrap:'wrap',
             justifyContent:'center',gap:'80%',alignItems:'center'}}>
-                <div>
+                <div style={{display:'flex',justifyContent:'center' ,alignItems:'center',gap:5}}>
                     <Link to='/'>
-                        <Button  color='success'  >time praying </Button>
+                        <Button  variant="outlined" color="success" >time praying </Button>
                     </Link>
                     <Link to='/quran'>
-                        <Button  color='success' >quran </Button>
+                        <Button variant="outlined" color="success" >quran </Button>
                     </Link>
                 </div>
                 <div>

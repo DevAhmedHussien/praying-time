@@ -132,10 +132,10 @@ const fetchCities = async (countryCode) => {
 };
 return (
 < div style={{padding:50 }}>
-	<div style={{padding:50 , display:'flex' ,flexWrap:"wrap", justifyContent:'center' , alignItems:'center', gap:100}} >
+	<div style={{padding:50 , display:'flex' ,flexWrap:"wrap", justifyContent:'center' , alignItems:'center', gap:50}} >
 	<div>
 		<h2> Country: <span style={{color:"wheat"}}>{selectedCountry}</span></h2>
-		<select style={{color:'black' ,background:'silver',height:'40px',borderRadius: '10px',width:'100%',
+		<select style={{color:'black' ,background:'silver',height:'40px',borderRadius: '10px',width:300,
     padding: '1px'}} 
 			onChange={(e)=>{
 			let ahmed = JSON.parse(e.target.value)
@@ -159,7 +159,7 @@ return (
 {
 	<div>
 		<h2>Cities in : <span style={{color:"green"}}>{selectedCountry} </span></h2>
-		<select  style={{color:'white' ,background:'silver',height:'40px',borderRadius: '10px',width:'100%',
+		<select  style={{color:'white' ,background:'silver',height:'40px',borderRadius: '10px',width:300,
     padding: '1px'}} 
 			onChange={(e)=>{
 			let originalString = e.target.value
@@ -177,14 +177,13 @@ return (
 }
 	</div>
 		{/* TOP ROW */}
-		<Grid container>
-			<Grid xs={8}>
-				<div style={{background:''}}>
+		{/* <Grid container> */}
+			<Box component={'div'}
+			 sx={{display:'flex', justifyContent:'center', alignItems:'center' , flexWrap:'wrap', gap:20}}>
+				<div>
 					<h2>{today}</h2>
 					<h1>{ ci !== null ? ci : 'default' }: {selectedCountry}</h1>
 				</div>
-			</Grid>
-				<Grid xs={4}>
 					<div>
 						<h2> still to  {" "} 
 							{/* متبقي حتى صلاة{" "} */}
@@ -193,8 +192,7 @@ return (
 						<h1>{remainingTime}</h1>
 						<audio src="" autoPlay={remainingTime =='00:00:00'?true:false} ></audio>
 					</div>
-				</Grid>
-			</Grid>
+			</Box>
 			{/*== TOP ROW ==*/}
 			<Divider style={{ borderColor: "white", opacity: "0.1" }} />
 			{/* PRAYERS CARDS */}
